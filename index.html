@@ -1,40 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página com Grid CSS</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <nav class="main-menu">
-                <img src="assets/logo-svg.png" alt="logo">
-                <div class="menu-pesquisa">
-                    <div class="barra-pesquisa">...</div>
-                    <div class="menu-itens">
-                        <div class="menu-item">Catálogo</div>
-                        <div class="menu-item">Sobre</div>
-                        <div class="menu-item">Contato</div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Grid CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#10b981">
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js")
+            .then(reg => console.log("SW registrado:", reg))
+            .catch(err => console.log("Erro no SW:", err));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="main-menu">
+            <img class="logo" src="assets/logo-svg.png" alt="logo" >
+            <div class="menu-pesquisa">
+                <div class="barra-pesquisa">...</div>
+                <div class="menu-itens">
+                    <div class="menu-item">Catálogo</div>
+                    <div class="menu-item">Sobre</div>
+                    <div class="menu-item">Contato</div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <div class="container-produtos">
-                <div>produto 1</div>
-                <div>produto 2</div>
-                <div>produto 3</div>
-                <div>produto 4</div>
-                <div>produto 5</div>
-                <div>produto 6</div>
-                <div>produto 7</div>
-                <div>produto 8</div>
-                <div>produto 9</div>
-                <div>produto 10</div>
-                <div>produto 11</div>
-                <div>produto 12</div>
+                <div class="menu-hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </main>
-    </body>
+        </nav>
+    </header>
+    <main>
+        <div class="secao-banner">
+            <img src="assets/exemplo-banner1.jpg" alt="logo">
+        </div>
+        <div class="container-produtos">
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+            <div class="item-grid">
+                <img class="imagem-produto" src="assets/produtos/img1.jpg" alt="produto">
+                <h3>Produto 1</h3>
+                <p>R$ 599,99</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2 class="nome-empresa">Industrias Gerber</h2>
+        <p>(47) 99999-9999</p>
+        <div class="redes-sociais">
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Tik-Tok</p>
+        </div>
+    </footer>
+</body>
 </html>

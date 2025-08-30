@@ -17,29 +17,46 @@ body {
 
 .main-menu {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    height: 15rem;
-    padding: 2rem;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 6rem;
 }
 
 .menu-pesquisa {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
 .barra-pesquisa {
-    background-color: gray;
+    background-color: #e5e7eb;
     height: 3rem;
     width: 30rem;
+    border-radius: 5px;
 }
 
 .menu-itens {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 0 1rem
+    gap: 2rem;
+}
+
+.menu-item {
+    font-weight: 600;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.menu-item:hover {
+    color: #10b981;
 }
 
 .menu-item {
@@ -48,16 +65,139 @@ body {
     font-size: 2rem;
 }
 
-.container-produtos {
-    display: grid;
-    padding: 1rem;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-evenly;
-    gap: 3rem;
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+.menu-hamburguer span {
+    background: #333;
+    height: 0.4rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    border-radius: 2px;
+    display: block;
 }
 
-.container-produtos > div {
-    width: 20rem;
-    height: 25rem;
-    background-color: orange;
+/* banner */
+.secao-banner {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
+
+.secao-banner img {
+    max-width: 90rem;
+}
+
+/* grid responsivo de itens */
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.item-grid {
+    width: 30rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-grid:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.item-grid > img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.item-grid > h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.item-grid > p {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #10b981;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-top: 4rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #1f2937;
+    color: #fff;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+}
+
+
+@media (max-width: 1260px) {
+
+    .container-produtos {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 950px) {
+
+    .container-produtos {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .menu-itens {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    .secao-banner img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .barra-pesquisa {
+        width: 15rem;
+    }
+
+    .container-produtos {
+        grid-template-columns: auto;
+    }
+
+    footer {
+        gap: 1rem;
+    }
+
+    .nome-empresa {
+        display: none;
+    }
+
+}
+
+
