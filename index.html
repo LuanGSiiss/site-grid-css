@@ -10,7 +10,7 @@
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("sw.js")
-            .then(reg => console.log("SW registrado:", reg))
+            .then(() => console.log("SW registrado:"))
             .catch(err => console.log("Erro no SW:", err));
         }
     </script>
